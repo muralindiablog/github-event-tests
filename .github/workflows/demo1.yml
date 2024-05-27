@@ -1,6 +1,11 @@
 name: Events Demo 1
 on: 
-  pull_request:
+  push: 
+    branches: [develop]
+    paths-ignore:
+      - '.github\workflows\*'
+  pull_request: 
+    branches: [main]
     types: 
       - opened
   workflow_dispatch:
